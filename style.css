@@ -1,0 +1,425 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f1f4fa;
+  font-family: Arial, sans-serif;
+  color: #17233b;
+}
+
+.app {
+  max-width: 520px;
+  min-height: 100vh;
+  margin: auto;
+  background: white;
+}
+
+header {
+  background: linear-gradient(135deg, #173c76, #477ed0);
+  color: white;
+  padding: 28px 22px 35px;
+  border-radius: 0 0 25px 25px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+header h1 {
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+header p {
+  color: #dce8ff;
+  font-size: 14px;
+}
+
+main {
+  padding: 22px 18px;
+}
+
+h2 {
+  margin-bottom: 5px;
+}
+
+.sub {
+  color: #8993a5;
+  font-size: 13px;
+}
+
+.days {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.day {
+  border: 0;
+  padding: 12px 15px;
+  border-radius: 12px;
+  background: #edf1f8;
+  color: #42516a;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.day.active {
+  background: #2864bd;
+  color: white;
+}
+
+.schedule,
+.add {
+  background: #f7f9fd;
+  padding: 17px;
+  border-radius: 17px;
+  margin-bottom: 17px;
+}
+
+.schedule h3,
+.add h3 {
+  margin-top: 0;
+}
+
+.lesson {
+  background: white;
+  border: 1px solid #e8edf5;
+  padding: 13px;
+  border-radius: 12px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.lesson button {
+  border: 0;
+  background: #edf2fa;
+  padding: 7px;
+  border-radius: 7px;
+  color: #315c9c;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dce3ee;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+#addButton {
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  border-radius: 10px;
+  background: #2864bd;
+  color: white;
+  font-weight: bold;
+}
+
+.empty {
+  color: #929bad;
+  text-align: center;
+  padding: 20px 5px;
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  color: #9ba5b5;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.lesson {
+  flex-wrap: wrap;
+}
+
+.lesson > span:first-child {
+  flex: 1;
+  min-width: 130px;
+}
+
+.lesson > span:last-child {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.lesson button {
+  cursor: pointer;
+  font-size: 13px;
+  padding: 10px 12px;
+}
+/* Tampilan modern tambahan */
+.app {
+  animation: muncul 0.5s ease;
+}
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.days button {
+  transition: 0.25s ease;
+}
+
+.days button:hover {
+  transform: translateY(-3px);
+}
+
+.lesson {
+  border-radius: 14px;
+  transition: 0.2s ease;
+}
+
+.lesson:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.add {
+  border-radius: 18px;
+}
+.days button.active {
+  background: #2563eb;
+  color: white;
+  border: 2px solid #1d4ed8;
+  box-shadow: 0 5px 14px rgba(37, 99, 235, 0.25);
+  transform: scale(1.05);
+}
+
+.days button {
+  border: 2px solid transparent;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.search-box {
+  margin: 18px 0;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #dbeafe;
+  border-radius: 14px;
+  background: white;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-box input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.15);
+}
+.theme-button {
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 11px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.theme-button:hover {
+  background: #334155;
+}
+body.dark-mode {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+body.dark-mode .app {
+  background: #0f172a;
+}
+
+body.dark-mode main {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+body.dark-mode .schedule,
+body.dark-mode .add {
+  background: #334155;
+  color: white;
+}
+
+body.dark-mode .lesson {
+  background: #475569;
+  color: white;
+}
+
+body.dark-mode input {
+  background: #334155;
+  color: white;
+  border-color: #64748b;
+}
+
+body.dark-mode .sub,
+body.dark-mode footer {
+  color: #cbd5e1;
+}
+.home-dashboard {
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  color: white;
+  padding: 22px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+.home-dashboard h2 {
+  font-size: 25px;
+  margin: 8px 0;
+}
+
+.home-dashboard p {
+  margin: 6px 0;
+}
+
+.student-card {
+  background: rgba(255, 255, 255, 0.18);
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 18px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.student-card h3 {
+  margin-top: 0;
+}
+.go-schedule {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0 20px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.go-schedule:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.stat-card {
+  background: #eff6ff;
+  padding: 14px 6px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #dbeafe;
+}
+
+.stat-card span {
+  font-size: 23px;
+}
+
+.stat-card h3 {
+  font-size: 22px;
+  color: #2563eb;
+  margin: 8px 0 4px;
+}
+
+.stat-card p {
+  font-size: 11px;
+  margin: 0;
+  color: #475569;
+}
+
+body.dark-mode .stat-card {
+  background: #334155;
+  border-color: #475569;
+}
+
+body.dark-mode .stat-card p {
+  color: #e2e8f0;
+}
+.today-info {
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 13px;
+  border-radius: 12px;
+  margin: 12px 0;
+  font-weight: bold;
+  text-align: center;
+}
+.clock-info {
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.clock-info {
+  animation: clockGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes clockGlow {
+  from {
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  }
+  to {
+    box-shadow: 0 6px 22px rgba(37, 99, 235, 0.5);
+  }
+}
+.greeting-text {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 12px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  text-align: center;
+}
+.back-to-top {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 15px 0;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.back-to-top:hover {
+  background: #1d4ed8;
+    }
