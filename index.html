@@ -1,0 +1,83 @@
+
+<link rel="stylesheet" href="style.css">
+<div class="home-dashboard">
+  <p>SELAMAT DATANG DI</p>
+  <h2>My Schedule 👋</h2>
+  <p>Aplikasi Jadwal Pelajaran Sekolah</p>
+
+  <div class="student-card">
+    <h3>Profil Pembuat</h3>
+    <p>Nama: Axel Anargya Putra</p>
+    <p>Kelas: XI-J</p>
+    <p>Presensi: 08</p>
+    <p id="greetingText" class="greeting-text"></p>
+  </div>
+</div>
+<div class="app">
+  <header>
+    <div class="top">
+      <span>MY SCHOOL</span>
+      <span>📚</span>
+    </div>
+    <h1>My Schedule</h1>
+ <button id="themeButton" class="theme-button">
+  🌙 Mode Gelap
+ </button>
+    <p>Jadwal pelajaran sekolahmu</p>
+  </header>
+
+  <main>
+    <h2>Jadwal Pelajaran</h2>
+    <p class="sub">Pilih hari untuk melihat jadwal.</p>
+<div class="today-info">
+  📅 Hari ini: <span id="todayDate"></span>
+</div>
+    <div class="clock-info">
+  🕒 <span id="digitalClock">00:00:00</span>
+    </div>
+    <div id="days" class="days"></div>
+<div class="search-box">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="🔍 Cari mata pelajaran..."
+  >
+</div>
+    <button class="go-schedule" onclick="document.querySelector('.schedule').scrollIntoView({behavior:'smooth'})">
+  📚 Lihat Jadwal Saya
+    </button>
+    <div class="stats-container">
+  <div class="stat-card">
+    <span>📚</span>
+    <h3 id="subjectCount">0</h3>
+    <p>Mata Pelajaran</p>
+  </div>
+
+  <div class="stat-card">
+    <span>📅</span>
+    <h3 id="dayCount">0</h3>
+    <p>Hari Sekolah</p>
+  </div>
+
+  <div class="stat-card">
+    <span>📝</span>
+    <h3 id="totalCount">0</h3>
+    <p>Total Jadwal</p>
+  </div>
+    </div>
+    <section class="schedule">
+      <h3 id="dayTitle">Senin</h3>
+      <div id="lessonList"></div>
+    </section>
+
+    <section class="add">
+      <h3>Tambah Pelajaran</h3>
+      <input id="lessonInput" placeholder="Nama mata pelajaran">
+      <button id="addButton">+ Tambah Pelajaran</button>
+    </section>
+  </main>
+<button id="backToTop" class="back-to-top">⬆ Kembali ke Atas</button>
+  <footer>My Schedule · School Planner</footer>
+</div>
+
+<script src="script.js"></script>
